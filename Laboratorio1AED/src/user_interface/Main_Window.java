@@ -8,6 +8,8 @@ public class Main_Window extends JFrame{
 	
 
 	private Panel_Generator ToGenerate;
+	private Panel_Modifier ToModify;
+	private Panel_Organized ToSeeTheResult;
 	
 	public Main_Window() {
 		setLayout(new BorderLayout());
@@ -16,6 +18,12 @@ public class Main_Window extends JFrame{
 		
 		ToGenerate = new Panel_Generator();
 		add(ToGenerate, BorderLayout.NORTH);
+		
+		ToModify = new Panel_Modifier();
+		add(ToModify, BorderLayout.CENTER);
+		
+		ToSeeTheResult = new Panel_Organized();
+		add(ToSeeTheResult, BorderLayout.SOUTH);
 		
 		pack();
 		setVisible(true);	
