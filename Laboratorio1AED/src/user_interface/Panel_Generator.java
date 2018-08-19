@@ -24,5 +24,6 @@ public class Panel_Generator extends JPanel {
 		ToFinishTheGeneration = new Auxiliary_Panel_Generator();
 		add(ToFinishTheGeneration);
 		
+		
 	}
 }
