@@ -16,10 +16,10 @@ public class Main_Window extends JFrame{
 		setResizable(false);
 		setLocationRelativeTo(null);
 		
-		ToGenerate = new Panel_Generator();
+		ToGenerate = new Panel_Generator(this);
 		add(ToGenerate, BorderLayout.NORTH);
 		
-		ToModify = new Panel_Modifier();
+		ToModify = new Panel_Modifier(this);
 		add(ToModify, BorderLayout.CENTER);
 		
 		ToSeeTheResult = new Panel_Organized();

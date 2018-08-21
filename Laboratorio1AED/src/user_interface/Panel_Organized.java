@@ -11,13 +11,13 @@ public class Panel_Organized extends JPanel {
 	
 	public Panel_Organized() {
 		setBorder(BorderFactory.createLineBorder(Color.BLACK));
-		setBorder(BorderFactory.createTitledBorder("ZONA DE RESULTADO"));
+		setBorder(BorderFactory.createTitledBorder("RESULT ZONE"));
 		setLayout(new BorderLayout());
 		
 		TheArray = new Auxiliary_Panel_Array();
 		add(TheArray, BorderLayout.CENTER);
 		
-		Time = new JLabel("00:00:");
+		Time = new JLabel("00:00");
 		add(Time, BorderLayout.EAST);
 	}
 }

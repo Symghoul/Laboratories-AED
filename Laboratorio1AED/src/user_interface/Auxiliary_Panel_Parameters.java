@@ -18,22 +18,21 @@ public class Auxiliary_Panel_Parameters extends JPanel {
 	public Auxiliary_Panel_Parameters() {
 		setLayout(new GridLayout(4, 2));
 		
-		LSize = new JLabel("TAMAÑO");
+		LSize = new JLabel("SIZE");
 		add(LSize);
 		TSize = new JTextField();
 		add(TSize);
-		LMaximun = new JLabel("MÁXIMO");
+		LMaximun = new JLabel("MAXIMUM");
 		add(LMaximun);
-		LMinimum = new JLabel("MÍNIMO");
+		LMinimum = new JLabel("MINIMUM");
 		add(LMinimum);
 		TMaximum = new JTextField();
 		add(TMaximum);
 		TMinimum = new JTextField();
 		add(TMinimum);
-		LErrorRate = new JLabel("PORCENTAJE DE ERROR");
+		LErrorRate = new JLabel("ERROR RATE");
 		add(LErrorRate);
 		TErrorRate = new JTextField();
 		add(TErrorRate);
-	}
-
+	}	
 }
