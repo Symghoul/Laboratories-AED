@@ -34,5 +34,70 @@ public class Auxiliary_Panel_Parameters extends JPanel {
 		add(LErrorRate);
 		TErrorRate = new JTextField();
 		add(TErrorRate);
-	}	
+	}
+
+	public JLabel getLSize() {
+		return LSize;
+	}
+
+	public JTextField getTSize() {
+		return TSize;
+	}
+
+	public JLabel getLMaximun() {
+		return LMaximun;
+	}
+
+	public JTextField getTMaximum() {
+		return TMaximum;
+	}
+
+	public JLabel getLMinimum() {
+		return LMinimum;
+	}
+
+	public JTextField getTMinimum() {
+		return TMinimum;
+	}
+
+	public JLabel getLErrorRate() {
+		return LErrorRate;
+	}
+
+	public JTextField getTErrorRate() {
+		return TErrorRate;
+	}
+
+	public void setLSize(JLabel lSize) {
+		LSize = lSize;
+	}
+
+	public void setTSize(JTextField tSize) {
+		TSize = tSize;
+	}
+
+	public void setLMaximun(JLabel lMaximun) {
+		LMaximun = lMaximun;
+	}
+
+	public void setTMaximum(JTextField tMaximum) {
+		TMaximum = tMaximum;
+	}
+
+	public void setLMinimum(JLabel lMinimum) {
+		LMinimum = lMinimum;
+	}
+
+	public void setTMinimum(JTextField tMinimum) {
+		TMinimum = tMinimum;
+	}
+
+	public void setLErrorRate(JLabel lErrorRate) {
+		LErrorRate = lErrorRate;
+	}
+
+	public void setTErrorRate(JTextField tErrorRate) {
+		TErrorRate = tErrorRate;
+	}
+	
 }

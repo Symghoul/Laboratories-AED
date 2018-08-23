@@ -2,11 +2,9 @@ package user_interface;
 
 import java.awt.*;
 
-import java.awt.event.*;
-
 import javax.swing.*;
 
-public class Panel_Generator extends JPanel implements ActionListener {
+public class Panel_Generator extends JPanel{
 	
 	private Auxiliary_Panel_Generator ToFinishTheGeneration;
 	private JComboBox<String> ToSelectGenerador;
@@ -27,8 +25,29 @@ public class Panel_Generator extends JPanel implements ActionListener {
 		add(ToFinishTheGeneration);	
 	}
 
-	@Override
-	public void actionPerformed(ActionEvent arg0) {
-		
+	public Auxiliary_Panel_Generator getToFinishTheGeneration() {
+		return ToFinishTheGeneration;
 	}
+
+	public JComboBox<String> getToSelectGenerador() {
+		return ToSelectGenerador;
+	}
+
+	public Auxiliary_Panel_Parameters getToGenerate() {
+		return ToGenerate;
+	}
+
+	public void setToFinishTheGeneration(Auxiliary_Panel_Generator toFinishTheGeneration) {
+		ToFinishTheGeneration = toFinishTheGeneration;
+	}
+
+	public void setToSelectGenerador(JComboBox<String> toSelectGenerador) {
+		ToSelectGenerador = toSelectGenerador;
+	}
+
+	public void setToGenerate(Auxiliary_Panel_Parameters toGenerate) {
+		ToGenerate = toGenerate;
+	}
+	
+	
 }

@@ -24,7 +24,7 @@ public class Panel_Modifier extends JPanel implements ActionListener {
 		Order = new JButton("ORDER");
 		add(Order, BorderLayout.EAST);
 	}
-
+	
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
