@@ -23,6 +23,9 @@ public class Panel_Generator extends JPanel{
 		add(ToGenerate);
 		ToFinishTheGeneration = new Auxiliary_Panel_Generator(InformationFlow);
 		add(ToFinishTheGeneration);	
+		
+	setBackground(new Color(102,204,255));
+		
 	}
 
 	public Auxiliary_Panel_Generator getToFinishTheGeneration() {
