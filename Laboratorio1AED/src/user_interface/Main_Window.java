@@ -36,21 +36,13 @@ public class Main_Window extends JFrame{
 	public void Generator() {
 		try {
 			String kind = ToGenerate.getToSelectGenerador().getSelectedItem()+"";
-			int size = Integer.parseInt(ToGenerate.getToGenerate().getTSize().getText());
-			if(size<1) {
-				size = 1/0;
+			if(kind.equals("MANUAL")) {
+				boolean decimal = ToGenerate.getToFinishTheGeneration().getDecimal().getAutoscrolls();
+				int size = Integer.parseInt(ToGenerate.getToGenerate().getTSize().getText());
+				ToThink.ManualGenerator(decimal, size);
+				ToModify.getTheArray().ToUpdate(size, ToThink.getWholeNumberInput(),ToThink.getFloatingPointInput());
 			}
-			double maximum = Double.parseDouble(ToGenerate.getToGenerate().getTMaximum().getText());
-			double minimum =  Double.parseDouble(ToGenerate.getToGenerate().getTMinimum().getText());
-			if(maximum<minimum) {
-				size = 1/0;
-			}
-			double error = Double.parseDouble(ToGenerate.getToGenerate().getLErrorRate().getText());
-			boolean repeat = ToGenerate.getToFinishTheGeneration().getRepeat().isSelected();
-			if(repeat) {
-				JOptionPane.showMessageDialog(null, "repite");
-			}
-//			boolean decimal 
+			pack();
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, "You have typed incorrect data");
 		}

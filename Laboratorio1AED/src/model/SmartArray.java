@@ -7,11 +7,11 @@ public class SmartArray {
 	private double[] FloatingPointOutput;
 	private int[] WholeNumberOutput;
 	
-	
-	public void GeneralGenerator(String kind, int size, double maximum, double minimum, double error, boolean repeat, boolean decimal ) {
-		if(kind.equals("MANUAL")) {
-			ManualGenerator(decimal,size);
-		}
+	public SmartArray() {
+		FloatingPointInput = new double[0];
+		WholeNumberInput = new int[0];
+		FloatingPointOutput = new double[0];
+		WholeNumberOutput = new int [0];
 	}
 	
 	public void ManualGenerator(boolean decimal, int size) {
@@ -22,5 +22,37 @@ public class SmartArray {
 			WholeNumberInput = new int[size];
 			FloatingPointInput = new double[0];
 		}
+	}
+
+	public double[] getFloatingPointInput() {
+		return FloatingPointInput;
+	}
+
+	public void setFloatingPointInput(double[] floatingPointInput) {
+		FloatingPointInput = floatingPointInput;
+	}
+
+	public int[] getWholeNumberInput() {
+		return WholeNumberInput;
+	}
+
+	public void setWholeNumberInput(int[] wholeNumberInput) {
+		WholeNumberInput = wholeNumberInput;
+	}
+
+	public double[] getFloatingPointOutput() {
+		return FloatingPointOutput;
+	}
+
+	public void setFloatingPointOutput(double[] floatingPointOutput) {
+		FloatingPointOutput = floatingPointOutput;
+	}
+
+	public int[] getWholeNumberOutput() {
+		return WholeNumberOutput;
+	}
+
+	public void setWholeNumberOutput(int[] wholeNumberOutput) {
+		WholeNumberOutput = wholeNumberOutput;
 	}
 }

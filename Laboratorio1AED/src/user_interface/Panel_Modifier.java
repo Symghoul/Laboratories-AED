@@ -25,6 +25,30 @@ public class Panel_Modifier extends JPanel implements ActionListener {
 		add(Order, BorderLayout.EAST);
 	}
 	
+	public Main_Window getToSortTheArray() {
+		return ToSortTheArray;
+	}
+
+	public void setToSortTheArray(Main_Window toSortTheArray) {
+		ToSortTheArray = toSortTheArray;
+	}
+
+	public Auxiliary_Panel_Array getTheArray() {
+		return TheArray;
+	}
+
+	public void setTheArray(Auxiliary_Panel_Array theArray) {
+		TheArray = theArray;
+	}
+
+	public JButton getOrder() {
+		return Order;
+	}
+
+	public void setOrder(JButton order) {
+		Order = order;
+	}
+
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
