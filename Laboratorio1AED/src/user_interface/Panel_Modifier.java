@@ -11,15 +11,18 @@ public class Panel_Modifier extends JPanel implements ActionListener {
 	private Main_Window ToSortTheArray;
 	private Auxiliary_Panel_Array TheArray;
 	private JButton Order;
+	private JScrollPane ScrollBar;
 	
 	public Panel_Modifier(Main_Window TheAction) {
-		ToSortTheArray = TheAction;
 		setBorder(BorderFactory.createLineBorder(Color.BLACK));
 		setBorder(BorderFactory.createTitledBorder("MODIFIABLE ZONE"));
 		setLayout(new BorderLayout());
 		
+		
 		TheArray = new Auxiliary_Panel_Array();
-		add(TheArray, BorderLayout.CENTER);
+		ScrollBar = new JScrollPane(TheArray);
+		ScrollBar.setBounds(ScrollBar.getX(), ScrollBar.getY(), ScrollBar.getWidth(), ScrollBar.getHeight()+10);
+		add(ScrollBar, BorderLayout.CENTER);
 		
 		Order = new JButton("ORDER");
 		add(Order, BorderLayout.EAST);

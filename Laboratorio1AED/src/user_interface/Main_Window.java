@@ -14,9 +14,10 @@ public class Main_Window extends JFrame{
 	private Panel_Organized ToSeeTheResult;
 	
 	public Main_Window() {
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLayout(new BorderLayout());
 		setResizable(false);
-		setLocationRelativeTo(null);
+		
 		
 		ToThink = new SmartArray();
 		
@@ -27,9 +28,12 @@ public class Main_Window extends JFrame{
 		add(ToModify, BorderLayout.CENTER);
 		
 		ToSeeTheResult = new Panel_Organized();
+		ToSeeTheResult.setPreferredSize(new Dimension(500, 60));
 		add(ToSeeTheResult, BorderLayout.SOUTH);
 		
-		pack();
+		setSize(new Dimension(500,270));
+		
+		setLocationRelativeTo(null);
 		setVisible(true);	
 	}
 	
@@ -42,7 +46,10 @@ public class Main_Window extends JFrame{
 				ToThink.ManualGenerator(decimal, size);
 				ToModify.getTheArray().ToUpdate(size, ToThink.getWholeNumberInput(),ToThink.getFloatingPointInput());
 			}
-			pack();
+			setLocationRelativeTo(null);
+			repaint();
+			setVisible(false);
+			setVisible(true);
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, "You have typed incorrect data");
 		}
