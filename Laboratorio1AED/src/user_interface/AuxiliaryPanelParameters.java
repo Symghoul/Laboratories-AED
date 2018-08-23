@@ -4,7 +4,7 @@ import java.awt.*;
 
 import javax.swing.*;
 
-public class Auxiliary_Panel_Parameters extends JPanel {
+public class AuxiliaryPanelParameters extends JPanel {
 	
 	private JLabel LSize;
 	private JTextField TSize;
@@ -15,7 +15,7 @@ public class Auxiliary_Panel_Parameters extends JPanel {
 	private JLabel LErrorRate;
 	private JTextField TErrorRate;
 	
-	public Auxiliary_Panel_Parameters() {
+	public AuxiliaryPanelParameters() {
 		setLayout(new GridLayout(4, 2));
 		
 		LSize = new JLabel("SIZE");

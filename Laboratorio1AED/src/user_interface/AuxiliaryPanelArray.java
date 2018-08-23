@@ -4,7 +4,7 @@ import java.awt.GridLayout;
 
 import javax.swing.*;
 
-public class Auxiliary_Panel_Array extends JPanel {
+public class AuxiliaryPanelArray extends JPanel {
 	
 	private JTextField[] TheNumbers;
 	

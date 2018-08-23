@@ -6,14 +6,14 @@ import javax.swing.*;
 
 import model.SmartArray;
 
-public class Main_Window extends JFrame{
+public class MainWindow extends JFrame{
 	
 	private SmartArray ToThink;
-	private Panel_Generator ToGenerate;
-	private Panel_Modifier ToModify;
-	private Panel_Organized ToSeeTheResult;
+	private PanelGenerator ToGenerate;
+	private PanelModifier ToModify;
+	private PanelOrganized ToSeeTheResult;
 	
-	public Main_Window() {
+	public MainWindow() {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLayout(new BorderLayout());
 		setResizable(false);
@@ -21,13 +21,13 @@ public class Main_Window extends JFrame{
 		
 		ToThink = new SmartArray();
 		
-		ToGenerate = new Panel_Generator(this);
+		ToGenerate = new PanelGenerator(this);
 		add(ToGenerate, BorderLayout.NORTH);
 		
-		ToModify = new Panel_Modifier(this);
+		ToModify = new PanelModifier(this);
 		add(ToModify, BorderLayout.CENTER);
 		
-		ToSeeTheResult = new Panel_Organized();
+		ToSeeTheResult = new PanelOrganized();
 		ToSeeTheResult.setPreferredSize(new Dimension(500, 60));
 		add(ToSeeTheResult, BorderLayout.SOUTH);
 		
@@ -56,6 +56,6 @@ public class Main_Window extends JFrame{
 	}
 	
 	public static void main(String[] args) {
-		Main_Window MyWindow = new Main_Window();
+		MainWindow MyWindow = new MainWindow();
 	}
 }

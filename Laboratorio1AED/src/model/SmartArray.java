@@ -23,6 +23,10 @@ public class SmartArray {
 			FloatingPointInput = new double[0];
 		}
 	}
+	
+	public void OrganizedGenerator(boolean decimal, boolean repeated, int size, int maximum, int minimum) {
+		
+	}
 
 	public double[] getFloatingPointInput() {
 		return FloatingPointInput;

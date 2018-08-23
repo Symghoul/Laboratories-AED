@@ -6,20 +6,20 @@ import java.awt.event.*;
 
 import javax.swing.*;
 
-public class Panel_Modifier extends JPanel implements ActionListener {
+public class PanelModifier extends JPanel implements ActionListener {
 
-	private Main_Window ToSortTheArray;
-	private Auxiliary_Panel_Array TheArray;
+	private MainWindow ToSortTheArray;
+	private AuxiliaryPanelArray TheArray;
 	private JButton Order;
 	private JScrollPane ScrollBar;
 	
-	public Panel_Modifier(Main_Window TheAction) {
+	public PanelModifier(MainWindow TheAction) {
 		setBorder(BorderFactory.createLineBorder(Color.BLACK));
 		setBorder(BorderFactory.createTitledBorder("MODIFIABLE ZONE"));
 		setLayout(new BorderLayout());
 		
 		
-		TheArray = new Auxiliary_Panel_Array();
+		TheArray = new AuxiliaryPanelArray();
 		ScrollBar = new JScrollPane(TheArray);
 		ScrollBar.setBounds(ScrollBar.getX(), ScrollBar.getY(), ScrollBar.getWidth(), ScrollBar.getHeight()+10);
 		add(ScrollBar, BorderLayout.CENTER);
@@ -28,19 +28,19 @@ public class Panel_Modifier extends JPanel implements ActionListener {
 		add(Order, BorderLayout.EAST);
 	}
 	
-	public Main_Window getToSortTheArray() {
+	public MainWindow getToSortTheArray() {
 		return ToSortTheArray;
 	}
 
-	public void setToSortTheArray(Main_Window toSortTheArray) {
+	public void setToSortTheArray(MainWindow toSortTheArray) {
 		ToSortTheArray = toSortTheArray;
 	}
 
-	public Auxiliary_Panel_Array getTheArray() {
+	public AuxiliaryPanelArray getTheArray() {
 		return TheArray;
 	}
 
-	public void setTheArray(Auxiliary_Panel_Array theArray) {
+	public void setTheArray(AuxiliaryPanelArray theArray) {
 		TheArray = theArray;
 	}
 

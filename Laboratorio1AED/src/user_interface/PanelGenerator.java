@@ -4,13 +4,13 @@ import java.awt.*;
 
 import javax.swing.*;
 
-public class Panel_Generator extends JPanel{
+public class PanelGenerator extends JPanel{
 	
-	private Auxiliary_Panel_Generator ToFinishTheGeneration;
+	private AuxiliaryPanelGenerator ToFinishTheGeneration;
 	private JComboBox<String> ToSelectGenerador;
-	private Auxiliary_Panel_Parameters ToGenerate;
+	private AuxiliaryPanelParameters ToGenerate;
 	
-	public Panel_Generator(Main_Window InformationFlow) {
+	public PanelGenerator(MainWindow InformationFlow) {
 		setBorder(BorderFactory.createLineBorder(Color.BLACK));
 		setBorder(BorderFactory.createTitledBorder("GENERATOR"));
 		setLayout(new FlowLayout());
@@ -19,16 +19,16 @@ public class Panel_Generator extends JPanel{
 		ToSelectGenerador = new JComboBox<String>();
 		ToSelectGenerador.setModel(new DefaultComboBoxModel<>(TheTypes));
 		add(ToSelectGenerador);
-		ToGenerate = new Auxiliary_Panel_Parameters();
+		ToGenerate = new AuxiliaryPanelParameters();
 		add(ToGenerate);
-		ToFinishTheGeneration = new Auxiliary_Panel_Generator(InformationFlow);
+		ToFinishTheGeneration = new AuxiliaryPanelGenerator(InformationFlow);
 		add(ToFinishTheGeneration);	
 		
 	setBackground(new Color(102,204,255));
 		
 	}
 
-	public Auxiliary_Panel_Generator getToFinishTheGeneration() {
+	public AuxiliaryPanelGenerator getToFinishTheGeneration() {
 		return ToFinishTheGeneration;
 	}
 
@@ -36,11 +36,11 @@ public class Panel_Generator extends JPanel{
 		return ToSelectGenerador;
 	}
 
-	public Auxiliary_Panel_Parameters getToGenerate() {
+	public AuxiliaryPanelParameters getToGenerate() {
 		return ToGenerate;
 	}
 
-	public void setToFinishTheGeneration(Auxiliary_Panel_Generator toFinishTheGeneration) {
+	public void setToFinishTheGeneration(AuxiliaryPanelGenerator toFinishTheGeneration) {
 		ToFinishTheGeneration = toFinishTheGeneration;
 	}
 
@@ -48,7 +48,7 @@ public class Panel_Generator extends JPanel{
 		ToSelectGenerador = toSelectGenerador;
 	}
 
-	public void setToGenerate(Auxiliary_Panel_Parameters toGenerate) {
+	public void setToGenerate(AuxiliaryPanelParameters toGenerate) {
 		ToGenerate = toGenerate;
 	}
 	

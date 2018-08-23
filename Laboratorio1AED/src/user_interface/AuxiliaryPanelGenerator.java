@@ -6,14 +6,14 @@ import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
-public class Auxiliary_Panel_Generator extends JPanel implements ActionListener {
+public class AuxiliaryPanelGenerator extends JPanel implements ActionListener {
 	
-	private Main_Window ToGenerateTheArray;
+	private MainWindow ToGenerateTheArray;
 	private JButton ActionToGenerate;
 	private JCheckBox Repeat;
 	private JCheckBox Decimal;
 	
-	public Auxiliary_Panel_Generator(Main_Window TheAction) {
+	public AuxiliaryPanelGenerator(MainWindow TheAction) {
 		ToGenerateTheArray = TheAction;
 		setLayout(new GridLayout(3, 0));
 		
@@ -28,7 +28,7 @@ public class Auxiliary_Panel_Generator extends JPanel implements ActionListener 
 		add(Decimal);
 	}
 
-	public Main_Window getToGenerateTheArray() {
+	public MainWindow getToGenerateTheArray() {
 		return ToGenerateTheArray;
 	}
 
@@ -44,7 +44,7 @@ public class Auxiliary_Panel_Generator extends JPanel implements ActionListener 
 		return Decimal;
 	}
 
-	public void setToGenerateTheArray(Main_Window toGenerateTheArray) {
+	public void setToGenerateTheArray(MainWindow toGenerateTheArray) {
 		ToGenerateTheArray = toGenerateTheArray;
 	}
 
