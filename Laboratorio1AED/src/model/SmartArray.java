@@ -116,6 +116,28 @@ public class SmartArray {
 			}
 		}
 	}
+	
+	public void GeneratorWithErrorPercentages(boolean decimal, boolean repeated, int size, int maximum, int minimum, int error) {
+		OrganizedGenerator(decimal, repeated, size, maximum, minimum);
+		if(decimal) {
+			double position =0;
+			int changes = ((error/100)*size)/2;
+			for(int i=0;i<changes;i+=2) {
+				position = FloatingPointInput[i];
+				FloatingPointInput[i] = FloatingPointInput[i+1];
+				FloatingPointInput[i+1] = position;
+			}
+		}else {
+			int position =0;
+			int changes = (error*size/100);
+			for(int i=0;i<changes;i+=2) {
+				position = WholeNumberInput[i];
+				WholeNumberInput[i] = WholeNumberInput[i+1];
+				WholeNumberInput[i+1] = position;
+			}
+		}
+	}
+	
 	public double[] getFloatingPointInput() {
 		return FloatingPointInput;
 	}
