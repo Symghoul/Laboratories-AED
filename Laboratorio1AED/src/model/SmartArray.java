@@ -63,7 +63,59 @@ public class SmartArray {
 			}
 		}
 	}
+	
+	public void OrganizedInversely(boolean decimal, boolean repeated, int size, int maximum, int minimum) {
+		Random number = new Random();
+		if(decimal) {
+			WholeNumberInput = new int[0];
+			FloatingPointInput = new double[size];
+			double limit = maximum;
+			double saveNumber = 0;
+			for(int i=0;i<FloatingPointInput.length;i++) {
+				saveNumber = minimum + (limit-minimum)*number.nextDouble();
+				FloatingPointInput[i] = saveNumber;
+				limit = saveNumber;
+			}
+		}else {
+			WholeNumberInput = new int[size];
+			FloatingPointInput = new double[0];
+			if(!repeated && (maximum-minimum)/size<1) {
+				size = 1/0;
+			}
+			int interval = (maximum-minimum)/size;
+			int saveNumber = 0;
+			if(repeated) {
+				for(int i=0; i<WholeNumberInput.length;i++) {
+					saveNumber = maximum-(number.nextInt(interval) + number.nextInt(2));
+					WholeNumberInput[i] = saveNumber;
+					maximum = saveNumber;
+				}
+			}else {
+				for(int i=0; i<WholeNumberInput.length;i++) {
+					saveNumber = maximum-1 -number.nextInt(interval);
+					WholeNumberInput[i] = saveNumber;
+					maximum = saveNumber;
+				}
+			}
+		}
+	}
 
+	public void RandomGenerator(boolean decimal, int size, int maximum, int minimum) {
+		Random number = new Random();
+		if(decimal) {
+			WholeNumberInput = new int[0];
+			FloatingPointInput = new double[size];
+			for(int i=0; i<FloatingPointInput.length;i++) {
+				FloatingPointInput[i] = minimum + (maximum-minimum)*number.nextDouble();
+			}
+		}else {
+			WholeNumberInput = new int[size];
+			FloatingPointInput = new double[0];
+			for(int i=0; i<WholeNumberInput.length;i++) {
+				WholeNumberInput[i] = number.nextInt(maximum-minimum)+minimum;
+			}
+		}
+	}
 	public double[] getFloatingPointInput() {
 		return FloatingPointInput;
 	}
