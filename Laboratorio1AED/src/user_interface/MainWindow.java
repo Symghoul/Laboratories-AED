@@ -41,9 +41,20 @@ public class MainWindow extends JFrame{
 		try {
 			String kind = ToGenerate.getToSelectGenerador().getSelectedItem()+"";
 			if(kind.equals("MANUAL")) {
-				boolean decimal = ToGenerate.getToFinishTheGeneration().getDecimal().getAutoscrolls();
+				boolean decimal = ToGenerate.getToFinishTheGeneration().getDecimal().isSelected();
 				int size = Integer.parseInt(ToGenerate.getToGenerate().getTSize().getText());
 				ToThink.ManualGenerator(decimal, size);
+				ToModify.getTheArray().ToUpdate(size, ToThink.getWholeNumberInput(),ToThink.getFloatingPointInput());
+			}else if(kind.equalsIgnoreCase("ORGANIZED")) {
+				boolean decimal = ToGenerate.getToFinishTheGeneration().getDecimal().isSelected();
+				boolean repeated = ToGenerate.getToFinishTheGeneration().getRepeat().isSelected();
+				int size = Integer.parseInt(ToGenerate.getToGenerate().getTSize().getText());
+				int maximum = Integer.parseInt(ToGenerate.getToGenerate().getTMaximum().getText());
+				int minimum = Integer.parseInt(ToGenerate.getToGenerate().getTMinimum().getText());
+				if(maximum<minimum) {
+					size = 1/0;
+				}
+				ToThink.OrganizedGenerator(decimal, repeated, size, maximum, minimum);
 				ToModify.getTheArray().ToUpdate(size, ToThink.getWholeNumberInput(),ToThink.getFloatingPointInput());
 			}
 			setLocationRelativeTo(null);
